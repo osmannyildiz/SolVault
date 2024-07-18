@@ -7,9 +7,8 @@ import "@solana/wallet-adapter-react-ui/styles.css";
 import React from "react";
 import ReactDOM from "react-dom/client";
 import App from "./App.jsx";
+import { RPC_ENDPOINT } from "./config";
 import "./main.css";
-
-const RPC_ENDPOINT = "http://localhost:8899";
 
 ReactDOM.createRoot(document.getElementById("root")).render(
 	<React.StrictMode>
