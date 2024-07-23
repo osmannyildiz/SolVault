@@ -1,5 +1,7 @@
 # 🗄️ SolVault
 
+> 📌 Status Update, July 23: We are working on the frontend UI
+
 SolVault lets users create vaults and store lamports in them. Each vault has a unique address and a secret key. The key is required to withdraw the funds stored inside a vault.
 
 Thanks to its versatility, SolVault could come in handy in many different scenarios. Some examples:
