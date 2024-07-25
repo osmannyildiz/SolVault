@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+<svg width="48" height="48" version="1.1" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+ <defs>
+  <linearGradient id="linearGradient8" x1="1.5" x2="46.5" y1="30.5" y2="14.5" gradientUnits="userSpaceOnUse">
+   <stop stop-color="#9945ff" offset="0"/>
+   <stop stop-color="#14f195" offset="1"/>
+  </linearGradient>
+ </defs>
+ <g stroke="#000">
+  <rect x="33" y="39" width="7" height="7" rx="2" ry="2" fill="none" stroke-width="3"/>
+  <rect x="8" y="39" width="7" height="7" rx="2" ry="2" fill="none" stroke-width="3"/>
+  <rect x="2" y="2" width="44" height="42" rx="4" ry="4" fill="url(#linearGradient8)" stroke-width="3"/>
+  <rect x="8" y="8" width="32" height="30" rx="2" ry="2" fill="none" stroke-width="3"/>
+  <path transform="matrix(1.851 0 0 1.851 -89.27 18.574)" d="m64.027 6.4425c-1.1941 0.03915-0.64627-1.7555-1.5183-2.5721-0.87202-0.81666-2.6269-0.15247-2.666-1.3465s1.7555-0.64627 2.5721-1.5183c0.81666-0.87202 0.15247-2.6269 1.3465-2.666 1.1941-0.03915 0.64627 1.7555 1.5183 2.5721 0.87202 0.81666 2.6269 0.15247 2.666 1.3465 0.03915 1.1941-1.7555 0.64627-2.5721 1.5183s-0.15247 2.6269-1.3465 2.666z" fill="#fff" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.6207"/>
+ </g>
+</svg>

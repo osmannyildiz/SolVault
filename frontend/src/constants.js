@@ -1,0 +1,4 @@
+export const TABS = {
+	CREATE_VAULT: "CREATE_VAULT",
+	UNLOCK_VAULT: "UNLOCK_VAULT",
+};

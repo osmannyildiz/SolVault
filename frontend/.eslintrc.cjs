@@ -17,6 +17,7 @@ module.exports = {
 			"warn",
 			{ allowConstantExport: true },
 		],
+		"react/prop-types": "off", // TODO Open this and use prop types
 	},
 	globals: {
 		Buffer: false,
