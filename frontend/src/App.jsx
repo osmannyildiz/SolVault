@@ -1,16 +1,13 @@
-import { WalletNotConnectedError } from "@solana/wallet-adapter-base";
-import { useConnection, useWallet } from "@solana/wallet-adapter-react";
-import { Transaction, TransactionInstruction } from "@solana/web3.js";
 import { useMemo, useState } from "react";
 import Header from "./components/Header";
-import { PROGRAM_ID } from "./config";
 import { TABS } from "./constants";
+import { useFoo } from "./hooks/useFoo";
+import { SolVault } from "./programs/solvault";
 import CreateVault from "./tabs/CreateVault";
 import UnlockVault from "./tabs/UnlockVault";
 
 function App() {
-	const { connection } = useConnection();
-	const { publicKey, sendTransaction } = useWallet();
+	const { sendTx } = useFoo();
 
 	const [activeTab, setActiveTab] = useState(TABS.CREATE_VAULT);
 
@@ -26,33 +23,7 @@ function App() {
 	}, [activeTab]);
 
 	const callSanityCheck = async () => {
-		if (!publicKey) throw new WalletNotConnectedError();
-
-		const instruction1 = new TransactionInstruction({
-			keys: [],
-			programId: PROGRAM_ID,
-			data: Buffer.concat([
-				Buffer.alloc(1, 0), // Instruction type: sanity_check
-			]),
-		});
-
-		const transaction = new Transaction().add(instruction1);
-
-		const {
-			context: { slot: minContextSlot },
-			value: { blockhash, lastValidBlockHeight },
-		} = await connection.getLatestBlockhashAndContext();
-
-		const signature = await sendTransaction(transaction, connection, {
-			minContextSlot,
-		});
-
-		await connection.confirmTransaction({
-			blockhash,
-			lastValidBlockHeight,
-			signature,
-		});
-
+		await SolVault.sanityCheck(sendTx);
 		console.log("hey done");
 	};
 

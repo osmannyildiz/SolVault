@@ -1,8 +1,11 @@
 # 🗄️ SolVault
 
-> 📌 Status Update, July 23: We are working on the frontend UI
+> 📌 **Status Update, July 26:** "Create Vault" implemented, now we're working on "Unlock Vault"
 
 SolVault lets users create vaults and store lamports in them. Each vault has a unique address and a secret key. The key is required to withdraw the funds stored inside a vault.
+
+![Screenshot](https://github.com/osmannyildiz/SolVault/blob/main/assets/screenshot.png?raw=true)
+*(Development version. UI is subject to change)*
 
 Thanks to its versatility, SolVault could come in handy in many different scenarios. Some examples:
 

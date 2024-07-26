@@ -1,10 +1,23 @@
 import { mdiDiceMultiple, mdiEye } from "@mdi/js";
 import Icon from "@mdi/react";
+import { useFoo } from "../hooks/useFoo";
+import { SolVault } from "../programs/solvault";
 
 function CreateVault() {
+	const { sendTx, publicKey } = useFoo();
+
+	const onSubmit = async (event) => {
+		event.preventDefault();
+
+		await SolVault.createVault(sendTx, publicKey);
+		// TODO Get returned vaultAccountToInitPk and show it to the user
+
+		console.log("hey done");
+	};
+
 	return (
 		<div className="text-center">
-			<form className="flex flex-col items-stretch gap-12">
+			<form className="flex flex-col items-stretch gap-12" onSubmit={onSubmit}>
 				<div className="flex flex-col items-center gap-2">
 					<label htmlFor="create--amount">Amount</label>
 					<input
@@ -52,7 +65,7 @@ function CreateVault() {
 					</div>
 				</div>
 				<button
-					type="button"
+					type="submit"
 					className="bg-purple-700 text-white rounded-lg px-2 py-2 hover:bg-purple-800 transition-colors"
 				>
 					Lock 123 SOL
